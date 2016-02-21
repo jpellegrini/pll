@@ -1,0 +1,8 @@
+(compile -X r7rs -R r7rs -s -O2 "pll.scm")
+(compile -X r7rs -R r7rs -s -O2 "pll.import.scm")
+
+(install-extension
+ 'pll
+ '("pll.so" "pll.import.so")
+ '((version 1.5)))
+ 

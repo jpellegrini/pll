@@ -1,0 +1,15 @@
+1.5
+* Packaging: now available as R7RS module for some implementations;
+  included instructions on how to load, with and without R7RS
+* Manual in Markdown; translated into HTML, txt and PDF
+* Now available as Chicken Egg
+1.4
+* Minor changes to the manual and README
+* Fixing licence headers
+1.3
+* Compatibility with STklos
+1.2
+* Fixed compatibility with MIT, SISC, and Gambit, while also
+  cleaning up the code that does implementation-specific stuff.
+1.1
+* Initial release

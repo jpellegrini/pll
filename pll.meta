@@ -1,0 +1,8 @@
+((egg "pll.egg")
+ (files "COPYING"  "README.txt"  "SUPPORTED-SCHEMES"    "amb.scm"  "changelog"  "manual.html"  "manual.md" "manual.pdf"  "manual.txt"  "pll-standalone.scm"  "pll.scm"    "ppl.meta"  "prolog-core.scm"  "prolog-examples.scm"  "pll.setup"  "style.css"  "unify.scm")
+ (license "GPL-3")
+ (category logic)
+ (needs srfi-1)
+ (author "Jeronimo C. Pellegrini")
+ (synopsis "A simple Prolog implementation in Scheme, using the AMB operator"))
+

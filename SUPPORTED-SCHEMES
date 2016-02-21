@@ -1,0 +1,38 @@
+I have made an effort to get the interpreter working in as many Scheme
+implementations as I could. Below is a list of supported and not
+supported Schemes. "Supported" means I ran the example code pieces
+(in prolog-examples.scm) and they worked as sxpected. I did no
+further tests.
+
+There are two ways to use PLL:
+
+(load "pll-standalone.scm")    ;; this works on all supported schemes.
+
+(import (pll))                 ;; only on the systems marked as having 
+                               ;; support for R7RS modules
+
+
+
+Scheme     version      R7RS module        Note
+-----------------------------------------------
+Chicken     4.*		Y
+Gauche      0.9.4	Y
+Guile       2.*		-
+Chibi       0.7.2	Y
+Husk        3.19.1	-
+SISC        1.16.6	-
+Saggitarius 0.7.1	Y
+Gambit      4.7     	-                  Needs -:s flag for syntax rules, and SRFI-1
+MIT Scheme  9.1.1       -
+STklos      1.10	-
+
+Currently not supported:
+
+SigScheme  (syntax-rules is disabled in sigscheme for now)
+TinyScheme (syntax-rules not implemented)
+Scheme9    (very strange behavior -- needs investigation)
+Kawa       (AMB doesn't work because of some different call/cc behavior)
+Foment     (the Hanoi towers example eats up 100% CPU and never finishes)
+SCM        (no support for cond-expand, but would probably work)
+SIOD       (syntax-rules not implemented)
+
