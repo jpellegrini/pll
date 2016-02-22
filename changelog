@@ -1,3 +1,5 @@
+1.6.1
+* Fixed one small packaging bug
 1.6
 * Scheme48 is supported
 * Fixed Chicken packaging problems
