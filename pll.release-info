@@ -1,0 +1,4 @@
+(repo git "git://github.com/jpellegrini/{egg-name}.git")
+(uri targz "https://github.com/jpellegrini/{egg-name}/archive/{egg-release}")
+(release "v1.5")
+
