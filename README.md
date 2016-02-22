@@ -72,7 +72,7 @@ There are two ways to use PLL:
 ```
 
 ```
-Scheme     version      R7RS module        Note
+Scheme      version	R7RS module	Note
 -----------------------------------------------
 Chicken     4.*		Y
 Gauche      0.9.4	Y
@@ -81,20 +81,26 @@ Chibi       0.7.2	Y
 Husk        3.19.1	-
 SISC        1.16.6	-
 Saggitarius 0.7.1	Y
-Gambit      4.7     	-                  Needs -:s flag for syntax rules, and SRFI-1
-MIT Scheme  9.1.1       -
+Gambit      4.7		-		Needs -:s flag for syntax rules, and SRFI-1
+MIT Scheme  9.1.1	-
 STklos      1.10	-
+Scheme48		-		Needs ,open srfi-1
 ```
 
 Currently not supported:
 
 ```
+Bigloo     (prolog+cut eats up 100% CPU; needs investigation)
 SigScheme  (syntax-rules is disabled in sigscheme for now)
 TinyScheme (syntax-rules not implemented)
 Scheme9    (very strange behavior -- needs investigation)
 Kawa       (AMB doesn't work because of some different call/cc behavior)
 Foment     (the Hanoi towers example eats up 100% CPU and never finishes)
-SCM        (no support for cond-expand, but would probably work)
+SCM        (support for neither cond-expand nor syntax-rules)
 SIOD       (syntax-rules not implemented)
 ```
+
+## Documentation
+
+A very short manual is included (manual.md, manual.txt, manual.pdf).
 

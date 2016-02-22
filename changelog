@@ -1,3 +1,7 @@
+1.6
+* Scheme48 is supported
+* Fixed Chicken packaging problems
+* Documentation cleanup
 1.5
 * Packaging: now available as R7RS module for some implementations;
   included instructions on how to load, with and without R7RS

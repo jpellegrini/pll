@@ -4,5 +4,5 @@
 (install-extension
  'pll
  '("pll.so" "pll.import.so")
- '((version 1.5)))
+ '((version "1.6")))
  
