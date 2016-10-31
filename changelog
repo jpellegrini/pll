@@ -1,3 +1,5 @@
+1.6.3
+* Partial support for asving and restoring built-in procedures
 1.6.2
 * Fixed one small packaging bug
 1.6

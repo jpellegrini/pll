@@ -242,8 +242,29 @@
            (write-it (cdr args) sub))
           (else #t))))
 
-;; this is the list of default built-ins (there's only one
-(define built-ins `((write . ,write-it)))
+(define built-ins #f)
+
+;; a built-in procedure to save the list of built-in procedures
+(define save-built-in-list
+  (lambda (filename)
+    (let ((out (open-output-file filename)))
+      (write built-ins out)
+      (close-output-port out))))
+
+;; similarly, a procedure to load the built-in list.
+(define load-built-in-list
+  (lambda (filename)
+    (let ((in (open-input-file filename)))
+      (let ((x (read in)))
+        (if (not (eof-object? x))
+            (set! built-ins x)))
+      (close-input-port in))))
+
+
+;; this is the list of default built-ins (there are only three, WRITE, SAVE-BUILT-IN-LIST and LOAD-BUILT-IN-LIST)
+(set! built-ins `((write . ,write-it)
+                  (save  . ,save-built-in-list)
+                  (load  . ,load-built-in-list)))
 
 ;; this will interpret a built-in.
 ;; proc-call is of the form (built-in-name arg1 arg2 ...)

@@ -84,7 +84,7 @@ Saggitarius 0.7.1	Y
 Gambit      4.7		-		Needs -:s flag for syntax rules, and SRFI-1
 MIT Scheme  9.1.1	-
 STklos      1.10	-
-Scheme48		-		Needs ,open srfi-1
+Scheme48       	 	-		Needs ,open srfi-1
 ```
 
 Currently not supported:

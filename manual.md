@@ -289,6 +289,10 @@ Grandson is: johnny
 The first line was the effect of having a `(write ...)` in the goal.
 The second is the answer.
 
+The built-ins `load` and `save` can be used to save and restore the list of built-ins
+from a file (but not the *definitions* of these built-ins).
+
+
 ### Prolog with any scheme function
 
 This interpreter has no sandbox -- it will recognize and execute
@@ -413,12 +417,11 @@ The cut can be used also in the goal.
 ## BUGS AND MISSING FEATURES
 
 
-* There is no way to save and load the database
+* There is no way to save and load the database (but there is a way to save
+  and load built-ins)
 
 * There is no simple way to get all possible answers (substitutions) for a
   query in a list.
-
-* This manual is too short.
 
 
 ## A BIBLIOGRAPHY
