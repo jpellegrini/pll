@@ -37,7 +37,7 @@
          (eqv? (string-ref (symbol->string s) 0)
               #\?))))
 
-
+;; applies substitution sub in expression exp.
 (define apply-sub
   (lambda (sub exp)
     (cond ((eqv? exp '()) '())
@@ -51,6 +51,8 @@
                  exp))))))
 
 
+;; checks wether the argument is a Prolog "variable":
+;; a variable is a symbol beginning with a question mark.
 (define variable?
    (lambda (s)
     (and (symbol? s)
@@ -63,6 +65,9 @@
 
 (define (bind var val sub) (cons (cons var val) sub))
 
+
+;; checks wether var occurs within expression x,
+;; given the substitution list "subst".
 (define occurs?
   (lambda (var x subst)
     (cond ((eqv? var x) #t)
@@ -72,6 +77,8 @@
                          (occurs? var (cdr x) subst)))
           (else #f))))
 
+;; unifies a variable ("var") with a value ("val"),
+;; given the substitution list "subst".
 (define uni-var
   (lambda (var val sub)
     (cond ((eqv? var val) sub)
@@ -83,6 +90,7 @@
           (else (bind var (apply-sub sub val)
                       (apply-sub (list (cons var val)) sub))))))
 
+;; unify x with y, given the substitution list "s".
 (define unify
   (lambda (x y . s)
     (let ((sub (if (null? s) '() (car s))))
